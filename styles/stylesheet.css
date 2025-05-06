@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+
+:root {
+  /* https://www.cursors-4u.com */
+  --cursor-default: url(https://cur.cursors-4u.net/cursors/cur-7/cur641.cur), auto;
+  --cursor-pointer: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto;
+  --cursor-pen: url(https://cur.cursors-4u.net/cursors/cur-7/cur632.cur), auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  cursor: var(--cursor-default);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: white;
+  zoom: reset;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a,
+.githublogo>i {
+  cursor: var(--cursor-pointer);
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-size: 4vw;
+  font-family: "Arizonia", cursive;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/3668452.jpg");
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.navbar-container {
+  display: flex;
+  width: 100%;
+  height: 6vh;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(0.25turn, #0c4f02, #072c01);
+  padding: 0 0.5em;
+  position: fixed;
+  z-index: 1;
+}
+
+.nav-contents {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.nav-contents a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.nav-contents a:hover {
+  color: #036f20;
+  background-color: white;
+}
+
+h1.logo a {
+  margin: 0 1vw;
+  color: white;
+  font-family: "Arizonia", cursive;
+  font-size: 2vw;
+}
+
+/* START -- About */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about .about-text {
+  color: white;
+  text-align: center;
+}
+
+#about .about-text p {
+  font-size: 2vw;
+  font-weight: 450;
+  line-height: 1.5em;
+}
+
+#about .about-text h1 {
+  font-size: 7vw;
+  margin-bottom: 3%;
+  font-family: "Arizonia", cursive;
+
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    color: #036f20;
+  }
+
+  12.5% {
+    color: #0d9c33;
+  }
+
+  25% {
+    color: #1cbb46;
+  }
+
+  37.5% {
+    color: #36d961;
+  }
+
+  50% {
+    color: #62f188;
+  }
+
+  62.5% {
+    color: #36d961;
+  }
+
+  75% {
+    color: #1cbb46;
+  }
+
+  87.5% {
+    color: #0d9c33;
+  }
+
+  100% {
+    color: #036f20;
+  }
+}
+
+#about .about-text h1:hover {
+  animation: wave 4s infinite;
+}
+
+/* END -- About */
+
+/* START -- EXAM */
+#exam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#exam h2 {
+  padding-bottom: 1%;
+}
+
+.ed-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6vh;
+  /*MQ */
+  width: 90vw;
+  height: 90vh;
+  background: linear-gradient(0.2turn,
+      rgba(31, 30, 31, 0.7),
+      rgba(31, 30, 31, 0.7));
+  background-clip: content-box;
+  border-radius: 5vw;
+}
+
+
+.ed-container p,
+.ed-container .education-courses {
+  font-size: 1.2vw;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* two equal columns */
+  gap: 2vw;
+  padding: 0 3vw;
+  height: 100%;
+}
+
+.education-item-1,
+.education-item-2 {
+  margin-bottom: 1vw;
+  padding: 1vw;
+    border-radius: 1vw;
+}
+
+.education-item-1 {
+  display: flex;
+  justify-content: center;
+  /* centers horizontally */
+  align-items: center;
+  /* centers vertically */
+  height: 100%;
+  /* ensures it fills the height of the grid */
+  -text-align: center;
+  /* centers text inside the p tag */
+}
+
+.education-item-2 img.problem9-image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* ensures full image is visible, not cropped */
+  border-radius: 1vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.education-item-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100%;
+}
+
+
+
+
+/* END -- EXAM */
+
+/* START -- Projects */
+#lesson {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15%;
+}
+
+.proj-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6vh;
+  /*MQ */
+  width: 70vw;
+  height: 70vh;
+  background: linear-gradient(0.2turn,
+      rgba(31, 30, 31, 0.7),
+      rgba(31, 30, 31, 0.7));
+  background-clip: content-box;
+  border-radius: 5vw;
+}
+
+.proj-container p,
+.proj-container {
+  font-size: 1.2vw;
+}
+
+.proj-item-1 {
+  margin-bottom: 1vw;
+}
+
+.proj-item-1,
+.proj-item-2 {
+  padding: 0 3vw;
+}
+
+#application, #resources {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15%;
+}
+
+.application-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6vh;
+  /*MQ */
+  width: 70vw;
+    height: 70vh;
+  background: linear-gradient(0.2turn,
+      rgba(31, 30, 31, 0.7),
+      rgba(31, 30, 31, 0.7));
+  background-clip: content-box;
+  border-radius: 5vw;
+}
+
+.application-container p,
+.application-container {
+  font-size: 1.2vw;
+}
+
+.application-item-1 {
+  margin-bottom: 1vw;
+}
+
+.application-item-1,
+.application-item-2 {
+  padding: 0 3vw;
+}
+
+
+/* END -- Projects */
+
+/* START -- Contact */
+#resources {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 83vh;
+  flex: 1;
+}
+
+.contact-container {
+  width: 100%;
+  -height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* END -- Contact */
+
+/* START -- Footer */
+.contact-footer {
+  background: linear-gradient(0.25turn, #0c4f02, #072c01);
+  padding: 1vh 0;
+  width: 100%;
+  height: 8vh; /*11vh*/
+  bottom: 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+#contact-icon-1,
+#contact-icon-2,
+#contact-icon-3 {
+  font-size: 1vw;
+  margin-right: 1vw;
+}
+
+.contact-item a,
+.contact-item span {
+  text-decoration: none;
+  color: white;
+  font-size: 1vw;
+}
+
+.bottom-text {
+  text-align: center;
+  font-size: 1vw;
+  padding-top: 1vh;
+}
+
+/* END -- Footer */
