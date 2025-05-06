@@ -100,10 +100,12 @@
                 </p>
               </div>
               <div class="education-item-2">
+                <p>Press on the image to see the original exam problem</p>
                 <img
                   src="/images/problem9.jpg"
                   alt="Problem 9 Completed"
                   class="problem9-image"
+                  onclick="changeImage(this)"
                 />
               </div>
             </div>
@@ -192,10 +194,17 @@
       </div>
       <!-- END - contact form-->
     </main>
-    <script
-      src="https://kit.fontawesome.com/1e1d2c8f82.js"
-      crossorigin="anonymous"
-    ></script>
+    
+    <script>
+      function changeImage(imgElement) {
+        const fileName = imgElement.src.split("/").pop(); // gets just the file name
+        if (fileName === "problem9.jpg") {
+          imgElement.src = "/images/original.jpg";
+        } else {
+          imgElement.src = "/images/problem9.jpg";
+        }
+      }
+    </script>
   </body>
 </html>
 

@@ -238,9 +238,14 @@ h1.logo a {
 
 .education-item-2 {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   max-height: 50%;
+}
+
+.education-item-2 p{
+  margin-bottom: 1vw;
 }
 
 /* END -- EXAM */
