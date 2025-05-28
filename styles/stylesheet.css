@@ -2,8 +2,10 @@
 
 :root {
   /* https://www.cursors-4u.com */
-  --cursor-default: url(https://cur.cursors-4u.net/cursors/cur-7/cur641.cur), auto;
-  --cursor-pointer: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto;
+  --cursor-default: url(https://cur.cursors-4u.net/cursors/cur-7/cur641.cur),
+    auto;
+  --cursor-pointer: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur),
+    auto;
   --cursor-pen: url(https://cur.cursors-4u.net/cursors/cur-7/cur632.cur), auto;
 }
 
@@ -34,7 +36,7 @@ main {
 }
 
 a,
-.githublogo>i {
+.githublogo > i {
   cursor: var(--cursor-pointer);
 }
 
@@ -49,7 +51,8 @@ section {
   height: 100vh;
   width: 100%;
   scroll-snap-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/3668452.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/3668452.jpg");
 }
 
 .wrapper {
@@ -189,13 +192,14 @@ h1.logo a {
   /*MQ */
   width: 90vw;
   height: 90vh;
-  background: linear-gradient(0.2turn,
-      rgba(31, 30, 31, 0.7),
-      rgba(31, 30, 31, 0.7));
+  background: linear-gradient(
+    0.2turn,
+    rgba(31, 30, 31, 0.7),
+    rgba(31, 30, 31, 0.7)
+  );
   background-clip: content-box;
   border-radius: 5vw;
 }
-
 
 .ed-container p,
 .ed-container .education-courses {
@@ -214,12 +218,10 @@ h1.logo a {
   align-items: stretch;
 }
 
-
 .education-item-1,
 .education-item-2 {
   height: auto;
   border-radius: 1vw;
-  
 }
 
 .education-item-1 {
@@ -244,50 +246,101 @@ h1.logo a {
   max-height: 50%;
 }
 
-.education-item-2 p{
+.education-item-2 p {
   margin-bottom: 1vw;
 }
 
 /* END -- EXAM */
 
 /* START -- Projects */
+/* Generic container styling */
 #lesson {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 15%;
 }
 
 .proj-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-top: 6vh;
-  /*MQ */
-  width: 70vw;
-  height: 70vh;
-  background: linear-gradient(0.2turn,
-      rgba(31, 30, 31, 0.7),
-      rgba(31, 30, 31, 0.7));
+  width: 95vw;
+  height: auto;
+  background: linear-gradient(
+    0.2turn,
+    rgba(31, 30, 31, 0.7),
+    rgba(31, 30, 31, 0.7)
+  );
   background-clip: content-box;
   border-radius: 5vw;
+  padding: 2vh 2vw;
 }
 
-.proj-container p,
-.proj-container {
+.proj-container h2 {
+  padding: 1% 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.proj-container p {
   font-size: 1.2vw;
+  color: #ddd;
+  text-align: center;
 }
 
-.proj-item-1 {
-  margin-bottom: 1vw;
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+  padding-top: 3vw;
+  align-items: center;
 }
 
 .proj-item-1,
 .proj-item-2 {
-  padding: 0 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
 }
 
-#application, #resources {
+/* Video and PDF should be responsive and styled */
+.aspect-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.3vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.aspect-wrapper video,
+.aspect-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1vw;
+  object-fit: cover;
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ed-container p {
+    font-size: 1rem;
+  }
+}
+/*     */
+
+#application,
+#resources {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,10 +354,12 @@ h1.logo a {
   margin-top: 6vh;
   /*MQ */
   width: 70vw;
-    height: 70vh;
-  background: linear-gradient(0.2turn,
-      rgba(31, 30, 31, 0.7),
-      rgba(31, 30, 31, 0.7));
+  height: 70vh;
+  background: linear-gradient(
+    0.2turn,
+    rgba(31, 30, 31, 0.7),
+    rgba(31, 30, 31, 0.7)
+  );
   background-clip: content-box;
   border-radius: 5vw;
 }
@@ -322,7 +377,6 @@ h1.logo a {
 .application-item-2 {
   padding: 0 3vw;
 }
-
 
 /* END -- Projects */
 

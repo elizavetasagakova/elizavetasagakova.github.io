@@ -100,7 +100,10 @@
                 </p>
               </div>
               <div class="education-item-2">
-                <p>Click the image to switch between the original problem and its solution.</p>
+                <p>
+                  Click the image to switch between the original problem and its
+                  solution.
+                </p>
                 <img
                   src="/images/problem9.jpg"
                   alt="Problem 9 Completed"
@@ -118,11 +121,27 @@
         <section class="section" id="lesson">
           <div class="proj-container">
             <h2>Lesson</h2>
-            <div class="proj-item-1">
-              <p></p>
+            <div class="proj-grid">
+              <!-- Video -->
+              <div class="proj-item-1">
+                <div class="aspect-wrapper">
+                  <video controls>
+                    <source src="videos/lesson_video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
+              <!-- PDF Presentation -->
+              <div class="proj-item-2">
+                <div class="aspect-wrapper">
+                  <iframe src="pdfs/lesson_pdf.pdf" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
         <!-- END - projects list/description -->
 
         <!-- projects list/description -->
@@ -194,7 +213,7 @@
       </div>
       <!-- END - contact form-->
     </main>
-    
+
     <script>
       function changeImage(imgElement) {
         const fileName = imgElement.src.split("/").pop(); // gets just the file name
@@ -207,4 +226,3 @@
     </script>
   </body>
 </html>
-
