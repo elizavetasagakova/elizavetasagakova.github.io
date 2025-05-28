@@ -329,32 +329,29 @@ h1.logo a {
 
 /* Responsive behavior */
 @media (max-width: 900px) {
-  .education-grid {
+  .proj-grid {
     grid-template-columns: 1fr;
   }
 
-  .ed-container p {
+  .proj-container p {
     font-size: 1rem;
   }
 }
 /*     */
 
-#application,
-#resources {
+/* Generic container styling */
+#application {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 15%;
 }
 
 .application-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-top: 6vh;
-  /*MQ */
-  width: 70vw;
-  height: 70vh;
+  width: 95vw;
+  height: auto;
   background: linear-gradient(
     0.2turn,
     rgba(31, 30, 31, 0.7),
@@ -362,24 +359,71 @@ h1.logo a {
   );
   background-clip: content-box;
   border-radius: 5vw;
+  padding: 2vh 2vw;
 }
 
-.application-container p,
-.application-container {
+.application-container h2 {
+  padding: 1% 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.application-container p {
   font-size: 1.2vw;
+  color: #ddd;
+  text-align: center;
 }
 
-.application-item-1 {
-  margin-bottom: 1vw;
+.application-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+  padding-top: 3vw;
+  align-items: center;
 }
 
 .application-item-1,
 .application-item-2 {
-  padding: 0 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
 }
 
-/* END -- Projects */
+/* Video and PDF should be responsive and styled */
+.aspect-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.3vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
 
+.aspect-wrapper video,
+.aspect-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1vw;
+  object-fit: cover;
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .application-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .application-container p {
+    font-size: 1rem;
+  }
+}
+/*     */
 /* START -- Contact */
 #resources {
   flex: 1;
