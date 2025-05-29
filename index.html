@@ -183,27 +183,39 @@
             <h2>Resources</h2>
             <div class="application-item-1">
               <div class="scroll-container">
-              <pre>
-Selected Topic:
-Functions of Two Variables (Sections 4.1–4.3)
-Free Online Resources:
-    1    Paul's Online Math Notes – Functions of Several Variables
- https://tutorial.math.lamar.edu/classes/calciii/multivrblefcns.aspx Pros: Offers detailed, step-by-step explanations with comprehensive examples, covering domains, graphs, and level curves.
- Cons: The text-heavy format might be overwhelming for visual learners seeking interactive content.
-    2    Khan Academy – Multivariable Functions https://www.khanacademy.org/math/multivariable-calculus/thinking-about-multivariable-function/introduction-to-multivariable-calculus/v/multivariable-functions Pros: Provides engaging video lessons that introduce concepts clearly, making it accessible for beginners.
- Cons: The pace might be too slow for those looking for a quick review or more advanced material.
-    3    Desmos – 3D Graphing Calculator
- https://www.desmos.com/3d Pros: An interactive tool that allows users to visualize 3D graphs and level curves, aiding in understanding the behavior of functions.
- Cons: Lacks explanatory content; best used as a supplementary visual aid alongside other resources.
-    4    MIT OpenCourseWare – Multivariable Calculus Lecture Notes
- https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/pages/lecture-notes/ Pros: Provides in-depth lecture notes and practice problems from a prestigious institution, offering a rigorous academic perspective.
- Cons: The advanced level and depth may be challenging for beginners without prior exposure to the subject.
-    5    Math Insight – Introduction to Multivariable Functions
- https://mathinsight.org/multivariable_function_introduction Pros: Features written explanations and interactive illustrations that are beginner-friendly, helping to build foundational understanding.
- Cons: Does not include practice problems, focusing more on conceptual explanations than application.
-Reflection Paragraph:
-These resources collectively provide a comprehensive toolkit for exploring functions of two variables. Paul's Online Math Notes are invaluable for students who appreciate detailed, methodical explanations, though the dense text may not cater to all learning styles. Khan Academy's video lessons offer a more conversational and accessible approach, ideal for those new to the topic, but might progress too slowly for advanced learners. Desmos serves as an excellent visual aid, allowing for dynamic interaction with 3D graphs and level curves, yet it doesn't delve into the underlying mathematical concepts. MIT OpenCourseWare delivers a deep dive into the subject matter, suitable for those seeking a rigorous academic challenge, but it may be daunting for novices. Lastly, Math Insight provides clear, interactive explanations that simplify complex ideas, although it lacks accompanying practice exercises. By integrating these diverse resources, learners can benefit from multiple perspectives and methods, enhancing their overall comprehension ofthe functions of two variables.
-      </pre
+              <pre id="resource-pre">
+              Selected Topic:
+              Functions of Two Variables (Sections 4.1–4.3)
+              Free Online Resources:
+
+                  1    Paul's Online Math Notes – Functions of Several Variables
+              https://tutorial.math.lamar.edu/classes/calciii/multivrblefcns.aspx
+              Pros: Offers detailed, step-by-step explanations with comprehensive examples, covering domains, graphs, and level curves.
+              Cons: The text-heavy format might be overwhelming for visual learners seeking interactive content.
+
+                  2    Khan Academy – Multivariable Functions 
+              https://www.khanacademy.org/math/multivariable-calculus/thinking-about-multivariable-function/introduction-to-multivariable-calculus/v/multivariable-functions 
+              Pros: Provides engaging video lessons that introduce concepts clearly, making it accessible for beginners.
+              Cons: The pace might be too slow for those looking for a quick review or more advanced material.
+              
+                  3    Desmos – 3D Graphing Calculator
+              https://www.desmos.com/3d 
+              Pros: An interactive tool that allows users to visualize 3D graphs and level curves, aiding in understanding the behavior of functions.
+              Cons: Lacks explanatory content; best used as a supplementary visual aid alongside other resources.
+              
+                  4    MIT OpenCourseWare – Multivariable Calculus Lecture Notes
+              https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/pages/lecture-notes/ 
+              Pros: Provides in-depth lecture notes and practice problems from a prestigious institution, offering a rigorous academic perspective.
+              Cons: The advanced level and depth may be challenging for beginners without prior exposure to the subject.
+              
+                  5    Math Insight – Introduction to Multivariable Functions
+              https://mathinsight.org/multivariable_function_introduction 
+              Pros: Features written explanations and interactive illustrations that are beginner-friendly, helping to build foundational understanding.
+              Cons: Does not include practice problems, focusing more on conceptual explanations than application.
+              
+              Reflection Paragraph:
+              These resources collectively provide a comprehensive toolkit for exploring functions of two variables. Paul's Online Math Notes are invaluable for students who appreciate detailed, methodical explanations, though the dense text may not cater to all learning styles. Khan Academy's video lessons offer a more conversational and accessible approach, ideal for those new to the topic, but might progress too slowly for advanced learners. Desmos serves as an excellent visual aid, allowing for dynamic interaction with 3D graphs and level curves, yet it doesn't delve into the underlying mathematical concepts. MIT OpenCourseWare delivers a deep dive into the subject matter, suitable for those seeking a rigorous academic challenge, but it may be daunting for novices. Lastly, Math Insight provides clear, interactive explanations that simplify complex ideas, although it lacks accompanying practice exercises. By integrating these diverse resources, learners can benefit from multiple perspectives and methods, enhancing their overall comprehension ofthe functions of two variables.
+                    </pre
               >
               <div class="scroll-fade"></div>
             </div>
@@ -269,6 +281,18 @@ These resources collectively provide a comprehensive toolkit for exploring funct
           imgElement.src = "/images/problem9.jpg";
         }
       }
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const pre = document.getElementById('resource-pre');
+    if (pre) {
+      const text = pre.textContent;
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      const linkedText = text.replace(urlRegex, (url) => {
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+      });
+      pre.innerHTML = linkedText;
+    }
+  });
     </script>
   </body>
 </html>
