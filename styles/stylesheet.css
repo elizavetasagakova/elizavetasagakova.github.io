@@ -36,6 +36,7 @@ main {
 }
 
 a,
+img,
 .githublogo > i {
   cursor: var(--cursor-pointer);
 }
