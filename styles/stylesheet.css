@@ -201,7 +201,7 @@ h1.logo a {
   border-radius: 5vw;
 }
 
-.ed-container p,
+.ed-container p, #reflection,
 .ed-container .education-courses {
   font-size: 1.2vw;
 }
@@ -253,7 +253,8 @@ h1.logo a {
 
 /* START -- Projects */
 /* Generic container styling */
-#lesson {
+#lesson,
+#lesson-reflection {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +285,6 @@ h1.logo a {
 .proj-container p {
   font-size: 1.2vw;
   color: #ddd;
-  text-align: center;
 }
 
 .proj-grid {
@@ -338,8 +338,13 @@ h1.logo a {
 }
 /*     */
 
+#reflection{
+  padding: 3em;
+}
+
 /* Generic container styling */
-#application {
+#application,
+#application-reflection {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,7 +375,6 @@ h1.logo a {
 .application-container p {
   font-size: 1.2vw;
   color: #ddd;
-  text-align: center;
 }
 
 .application-grid {
